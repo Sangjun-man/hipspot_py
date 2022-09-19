@@ -1,0 +1,9 @@
+/__pycache__
+/bin
+/include
+/lib 
+
+images.zip
+pyvenv.cfg
+
+src/images

@@ -5,12 +5,20 @@ import cv2
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import rgbToGray as rTg
+import os
 
 
 def imgCluster(id):
+
     # 이미지 읽기
-    src = 'src/images/'
-    url = src + id + '/0.jpg'
+
+    path = 'src/images/' + id + '/store' + '/'
+    dirList = os.listdir(os.path.dirname(path))
+    dirList.sort()
+
+    thumbNailFile = dirList[0]
+
+    url = path + thumbNailFile
     data = []
     print('url : ', url)
     img = cv2.imread(url, cv2.IMREAD_COLOR)
